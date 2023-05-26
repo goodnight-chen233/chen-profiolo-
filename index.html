@@ -4,7 +4,7 @@
     <title>Chen's Academic Rubbish Bin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <link rel="icon" href="../assets/garbagebin-1100l-a2.png" />
+    <link rel="icon" href="assets/garbagebin-1100l-a2.png" />
 
     <style>
       @font-face {
@@ -230,7 +230,7 @@
           myImage3.style.transform = "translateX(-180%)";
           myImage3.style.width = "10%";
           myImage3.style.visibility = "visible";
-          myImage3.innerHTML = '<img src="../assets/文件夾.png" />';
+          myImage3.innerHTML = '<img src="assets/文件夾.png" />';
           document.getElementById("myImage3-container").appendChild(myImage3);
 
           moveImageInParabola(myImage3, myImage3Array.length);
@@ -245,8 +245,8 @@
 
       function getTargetPageURL(index) {
         var targetPages = [
-          "wuzi/index.html",
-          "wuzi/index.html",
+          "CHEN/wuzi/index.html",
+          "CHEN/wuzi/index.html",
           "2/index.html",
           "page4.html",
           "page5.html",
@@ -258,20 +258,7 @@
         return targetPages[index];
       }
 
-      function changeText(event) {
-        var text = "";
-        var popup = event.target;
-        if (popup.classList.contains("popup2top")) {
-          text = "陈龙 Chen";
-        } else if (popup.classList.contains("popup3top")) {
-          text = "Shanghai";
-        } else if (popup.classList.contains("popup4top")) {
-          text = "2021.9-2023.5";
-        }
-        popup.innerText = text;
-        var newText = text.replace("Chen", "Chen ");
-        popup.innerText = newText;
-      }
+      
 
       function moveImageInParabola(image, index) {
   var startX = 0; // 起始位置的X坐标
@@ -363,9 +350,9 @@
       学术垃圾桶 Academic Rubbish Bin
     </div>
 
-    <img id="myImage" src="../assets/垃圾-02.png" width="90%" onclick="startShaking()" />
+    <img id="myImage" src="assets/垃圾-02.png" width="90%" onclick="startShaking()" />
     <div id="popupContainer" class="popup-container"></div>
     <div id="myImage3-container"></div>
-    <img id="myImage2" src="../assets/圈_画板 1.png" width="60%" />
+    <img id="myImage2" src="assets/圈_画板 1.png" width="60%" />
   </body>
 </html>
