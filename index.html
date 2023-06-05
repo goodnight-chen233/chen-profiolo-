@@ -89,64 +89,15 @@
         opacity: 1;
       }
 
-      .popup2top {
-        position: absolute;
-        color: rgb(48, 48, 48);
-        font-size: 80px;
-        padding: 90px;
-        transition: opacity 1s;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 2000px;
-        opacity: 0.8;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: marquee 8s linear infinite;
-        z-index: 999;
-      }
 
-      .popup3top {
-        position: absolute;
-        color: rgb(48, 48, 48);
-        font-size: 80px;
-        padding: 90px;
-        transition: opacity 1s;
-        top: 200px;
-        left: 0;
-        right: 0;
-        bottom: 2000px;
-        opacity: 0.8;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: marquee2 8s linear infinite;
-        z-index: 111;
-      }
+
+
 
       .popup3top:hover {
         color: rgb(0, 0, 0);
         font-family: "dindin2";
       }
 
-      .popup4top {
-        position: absolute;
-        color: rgb(48, 48, 48);
-        font-size: 80px;
-        padding: 90px;
-        transition: opacity 1s;
-        top: 400px;
-        left: 0;
-        right: 0;
-        bottom: 2000px;
-        opacity: 0.8;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: marquee 8s linear infinite;
-        z-index: 999;
-      }
 
       @keyframes marquee2 {
         0% {
@@ -196,6 +147,7 @@
         transform: translate(-50%, -50%) scale(1);
         animation: rotate 10s infinite linear;
         z-index: -999;
+        width: 800px;
       }
     
     </style>
@@ -230,7 +182,7 @@
           myImage3.style.transform = "translateX(-180%)";
           myImage3.style.width = "10%";
           myImage3.style.visibility = "visible";
-          myImage3.innerHTML = '<img src="assets/文件夾.png" />';
+          myImage3.innerHTML = '<img src="assets/wenjian.png" />';
           document.getElementById("myImage3-container").appendChild(myImage3);
 
           moveImageInParabola(myImage3, myImage3Array.length);
@@ -247,18 +199,31 @@
         var targetPages = [
           "CHEN/wuzi/index.html",
           "CHEN/wuzi/index.html",
-          "2/index.html",
-          "page4.html",
-          "page5.html",
-          "page6.html",
-          "page7.html",
-          "page8.html",
-          "page9.html"
+          "CHEN/2/index.html",
+          "CHEN/whitemouse/index.html",
+          "CHEN/dream/index.html",
+          "CHEN/money/index.html",
+          "CHEN/paper/index.html",
+          "CHEN/rubbish/index.html",
+          "CHEN/edge/index.html"
         ];
         return targetPages[index];
       }
 
-      
+      function changeText(event) {
+        var text = "";
+        var popup = event.target;
+        if (popup.classList.contains("popup2top")) {
+          text = "陈龙 Chen";
+        } else if (popup.classList.contains("popup3top")) {
+          text = "Shanghai";
+        } else if (popup.classList.contains("popup4top")) {
+          text = "2021.9-2023.5";
+        }
+        popup.innerText = text;
+        var newText = text.replace("Chen", "Chen ");
+        popup.innerText = newText;
+      }
 
       function moveImageInParabola(image, index) {
   var startX = 0; // 起始位置的X坐标
@@ -300,59 +265,19 @@
 
   requestAnimationFrame(move);
 }
-      function resetText(event) {
-        var text = "";
-        var popup = event.target;
-        if (popup.classList.contains("popup2top")) {
-          text = "学术垃圾桶   Academic Rubbish Bin";
-        } else if (popup.classList.contains("popup3top")) {
-          text = "学术垃圾桶   Academic Rubbish Bin";
-        } else if (popup.classList.contains("popup4top")) {
-          text = "学术垃圾桶   Academic Rubbish Bin";
-        }
-        popup.innerText = text;
-      }
 
-      window.addEventListener("DOMContentLoaded", function () {
-        // 获取popup2top、popup3top和popup4top元素
-        var popup2top = document.querySelector(".popup2top");
-        var popup3top = document.querySelector(".popup3top");
-        var popup4top = document.querySelector(".popup4top");
 
-        // 添加鼠标悬停事件处理程序
-        popup2top.addEventListener("mouseover", changeText);
-        popup3top.addEventListener("mouseover", changeText);
-        popup4top.addEventListener("mouseover", changeText);
-
-        // 添加鼠标离开事件处理程序
-        popup2top.addEventListener("mouseout", resetText);
-        popup3top.addEventListener("mouseout", resetText);
-        popup4top.addEventListener("mouseout", resetText);
-        setTimeout(function () {
-          popup2top.style.display = "none";
-          popup3top.style.display = "none";
-          popup4top.style.display = "none";
-        }, 8000);
-      });
     </script>
   </head>
 
   <body>
     
-    <div class="popup4top popup" id="popup4top" style="font-family: dindin;">
-      学术垃圾桶 Academic Rubbish Bin
+    
     </div>
 
-    <div class="popup2top popup" style="font-family: dindin;">
-      学术垃圾桶 Academic Rubbish Bin
-    </div>
-    <div class="popup3top popup" style="font-family: dindin;">
-      学术垃圾桶 Academic Rubbish Bin
-    </div>
-
-    <img id="myImage" src="assets/垃圾-02.png" width="90%" onclick="startShaking()" />
+    <img id="myImage" src="assets/garbagebin-01.png" width="70%" onclick="startShaking()" />
     <div id="popupContainer" class="popup-container"></div>
     <div id="myImage3-container"></div>
-    <img id="myImage2" src="assets/圈_画板 1.png" width="60%" />
+    <img id="myImage2" src="assets/circle.png" width="60%" />
   </body>
 </html>

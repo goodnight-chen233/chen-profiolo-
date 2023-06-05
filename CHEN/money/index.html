@@ -1,0 +1,207 @@
+<div class="grid-container">
+    <style>
+        .top1 {
+            position: absolute;
+            top: 5px;
+            font-size: 20px;
+        }
+        @keyframes rotate {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+        }
+      }
+        @font-face {
+            font-family: 'dindin';
+            src: url('../../assets/DinkieBitmap-9pxDemo.ttf') format('truetype');
+            font-style: normal;
+        }
+
+        pre {
+            font-size: 15px;
+            font-family: "dindin";
+        }
+
+        /* Internet Explorer 10+ */
+        body {
+            -ms-overflow-style: none;
+        }
+p{
+    bottom: 5px;
+}
+        h1,
+        p {
+            background-color: white; /* 背景颜色 */
+            display: inline-block; /* 内容水平排列 */
+            margin-right: 10px; /* 右边距 */
+            font-family: 'dindin', Arial, sans-serif;
+        }
+
+        #myImage2 {
+            position: fixed;
+            top: 600px;
+            left: 1200px;
+            width: 200px;
+            animation: rotate 10s infinite linear;
+        }
+
+        #myImage3 {
+            position: fixed;
+            top: 600px;
+            left: 1350px;
+            width: 130px;
+            animation: rotate 10s infinite linear;
+        }
+
+        .bottom-section h1,
+        .bottom-section p {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .grid-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            scrollbar-width: none; /* 隐藏滚动条 Firefox */
+            -ms-overflow-style: none; /* 隐藏滚动条 IE 和 Edge */
+        }
+
+        .grid-container::-webkit-scrollbar {
+            display: none; /* 隐藏滚动条 Chrome 和 Safari */
+        }
+
+        .grid-item {
+            flex: 0 0 auto;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var gridItems = document.querySelectorAll('.grid-item img');
+            gridItems.forEach(function(item, index) {
+                var className = 'grid-item-' + (index + 1);
+                item.parentNode.classList.add(className);
+                item.parentNode.addEventListener('mouseenter', function() {
+                    this.classList.add('hover');
+                });
+                item.parentNode.addEventListener('mouseleave', function() {
+                    this.classList.remove('hover');
+                });
+            });
+        });
+    </script>
+
+    <!-- 图像列表 -->
+    <div class="grid-item">
+        <img src="../../assets/m---01.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    
+    <div class="grid-item">
+        <img src="../../assets/m---02.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---03.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---04.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---05.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---06.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---07.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---08.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/m---09.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+        
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---11.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---12.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---13.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---14.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---15.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---16.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---17.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---18.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---19.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---20.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/m---21.jpg" width="300px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+</div>
+
+<div class="top1">
+    <p>陈龙 Wx/Tel 18121115698</p>
+</div>
+<pre>Chen Portfolio                                           (历史 History )                                          (灵魂 Ghost)                                           (经济 Economy)</pre>
+<a href="../../index.html">
+    <img id="myImage2" src="../../assets/small1.png" width="10px">
+</a>
+<a href="../../CHEN/paper/index.html">
+    <img id="myImage3" src="../../assets/next.png" width="10px">
+</a>
+<div class="scroll-container"></div>
+
+<div class="bottom-section">
+    <br> <br>
+    <h1>灵用钱</h1>
+    <br>
+    <h1>Ghost Money</h1>
+    <br><br> 
+    <p>以一种创新的方式探索社会问题。冥币象征着虚幻的价值，将注意力引向社会资源的滥用和无效使用。它旨在唤起人们对浪费现象的关注，引发对资源管理和社会财务规划的思考。
+这个设计项目结合艺术与讽刺，通过视觉元素和符号的运用，向观众传达深层次的信息。冥币的设计将通过视觉冲击和隐喻，引起观者的思考，激发对社会现象的关注与讨论。
+        通过冥币设计项目，我希望促使人们重新审视资源的分配和利用，提倡可持续发展和财务责任，为未来的社会建设提供启示。这个项目通过设计的力量，呼吁人们反思现有的观念和做法，为构建更加公平、可持续和负责任的社会做出贡献。</p>
+</div>

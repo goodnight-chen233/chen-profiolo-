@@ -1,0 +1,339 @@
+<div class="grid-container">
+    <style>
+        .top1 {
+            position: absolute;
+            top: 5px;
+            font-size: 20px;
+        }
+        @keyframes rotate {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+        }
+      }
+        @font-face {
+            font-family: 'dindin';
+            src: url('../../assets/DinkieBitmap-9pxDemo.ttf') format('truetype');
+            font-style: normal;
+        }
+
+        pre {
+            font-size: 15px;
+            font-family: "dindin";
+        }
+
+        /* Internet Explorer 10+ */
+        body {
+            -ms-overflow-style: none;
+        }
+p{
+    bottom: 5px;
+}
+        h1,
+        p {
+            background-color: white; /* 背景颜色 */
+            display: inline-block; /* 内容水平排列 */
+            margin-right: 10px; /* 右边距 */
+            font-family: 'dindin', Arial, sans-serif;
+        }
+
+        #myImage2 {
+            position: fixed;
+            top: 600px;
+            left: 1200px;
+            width: 200px;
+            animation: rotate 10s infinite linear;
+        }
+
+        #myImage3 {
+            position: fixed;
+            top: 600px;
+            left: 1350px;
+            width: 130px;
+            animation: rotate 10s infinite linear;
+        }
+
+        .bottom-section h1,
+        .bottom-section p {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        .grid-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            scrollbar-width: none; /* 隐藏滚动条 Firefox */
+            -ms-overflow-style: none; /* 隐藏滚动条 IE 和 Edge */
+        }
+
+        .grid-container::-webkit-scrollbar {
+            display: none; /* 隐藏滚动条 Chrome 和 Safari */
+        }
+
+        .grid-item {
+            flex: 0 0 auto;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.2);
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var gridItems = document.querySelectorAll('.grid-item img');
+            gridItems.forEach(function(item, index) {
+                var className = 'grid-item-' + (index + 1);
+                item.parentNode.classList.add(className);
+                item.parentNode.addEventListener('mouseenter', function() {
+                    this.classList.add('hover');
+                });
+                item.parentNode.addEventListener('mouseleave', function() {
+                    this.classList.remove('hover');
+                });
+            });
+        });
+    </script>
+
+    <!-- 图像列表 -->
+    <div class="grid-item">
+        <img src="../../assets/z---01.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    
+    <div class="grid-item">
+        <img src="../../assets/z---02.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---03.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---04.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---05.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---06.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---07.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---08.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---09.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+        
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---11.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---12.jpg" width="2s00px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---13.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---14.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---15.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---16.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---17.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---18.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---19.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---20.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---21.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+
+    
+    <div class="grid-item">
+        <img src="../../assets/z---22.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---23.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---24.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---25.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---26.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---27.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---28.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---29.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+        
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---30.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---31.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---32.jpg" width="2s00px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---33.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---34.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---35.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---36.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---37.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---38.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---39.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---40.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---41.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---42.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---43.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---44.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---45.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---46.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---47.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---48.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---49.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+        
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---50.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---45.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---52.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>
+    <div class="grid-item">
+        <img src="../../assets/z---53.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---54.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---55.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div>  <div class="grid-item">
+        <img src="../../assets/z---58.jpg" width="200px
+        "> <!-- 替换为你想要的图片路径 -->
+    </div> 
+</div>
+
+<div class="top1">
+    <p>陈龙 Wx/Tel 18121115698</p>
+</div>
+<pre>Chen Portfolio                                           (历史 History )                                          (灵魂 Ghost)                                           (经济 Economy)</pre>
+<a href="../../index.html">
+    <img id="myImage2" src="../../assets/small1.png" width="10px">
+</a>
+<a href="../../CHEN/paper/index.html">
+    <img id="myImage3" src="../../assets/next.png" width="10px">
+</a>
+<div class="scroll-container"></div>
+
+<div class="bottom-section">
+    <br> <br>
+    <h1>纸片楼</h1>
+    <br>
+    <h1>Paper Building</h1>
+    <br><br> 
+    <p>"繁花旧梦"是一个项目，讲述了上海一位开馄饨店的老奶奶坚守在市区狭隘破旧的纸片楼，不愿意搬到郊区而面临孤独的故事。
+        这个项目通过纪录片和书籍设计的方式，呈现老奶奶和她的馄饨店所处的环境。我们将深入探索这个狭小而破旧的市区纸片楼，揭示其中的生活故事和情感层面。
+        通过展示老奶奶的坚守和她的馄饨店的历史，我希望唤起观众对这个繁华城市中被遗忘的角落的关注。这个项目将聚焦于老奶奶的困境和内心世界，探索她如何在孤独和困难中坚持自己的信念。
+        我们也希望通过这个项目引起人们对城市发展中老旧建筑和社区的重视，老年人和老旧建筑被边缘化的挽救，探索可持续的城市更新和改善方案。
+        "繁花旧梦"旨在呈现一个富有情感和社会意义的故事，通过关注老奶奶和她的馄饨店，唤起人们对城市文化、社区精神和人情味的思考。我相信通过这个项目，可以唤起公众对城市中被忽视的角落的关注，并促进社会的共融和进步。
+        </p>
+</div>
