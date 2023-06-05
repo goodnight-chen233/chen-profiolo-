@@ -4,7 +4,7 @@
     <title>Chen's Academic Rubbish Bin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <link rel="icon" href="../assets/garbagebin-1100l-a2.png" />
+    <link rel="icon" href="assets/garbagebin-1100l-a2.png" />
 
     <style>
       @font-face {
@@ -147,6 +147,7 @@
         transform: translate(-50%, -50%) scale(1);
         animation: rotate 10s infinite linear;
         z-index: -999;
+        width: 800px;
       }
     
     </style>
@@ -181,7 +182,7 @@
           myImage3.style.transform = "translateX(-180%)";
           myImage3.style.width = "10%";
           myImage3.style.visibility = "visible";
-          myImage3.innerHTML = '<img src="../assets/wenjian.png" />';
+          myImage3.innerHTML = '<img src="assets/wenjian.png" />';
           document.getElementById("myImage3-container").appendChild(myImage3);
 
           moveImageInParabola(myImage3, myImage3Array.length);
@@ -196,15 +197,15 @@
 
       function getTargetPageURL(index) {
         var targetPages = [
-          "wuzi/index.html",
-          "wuzi/index.html",
-          "2/index.html",
-          "page4.html",
-          "page5.html",
-          "page6.html",
-          "page7.html",
-          "page8.html",
-          "page9.html"
+          "CHEN/wuzi/index.html",
+          "CHEN/wuzi/index.html",
+          "CHEN/2/index.html",
+          "CHEN/whitemouse/index.html",
+          "CHEN/dream/index.html",
+          "CHEN/money/index.html",
+          "CHEN/paper/index.html",
+          "CHEN/rubbish/index.html",
+          "CHEN/edge/index.html"
         ];
         return targetPages[index];
       }
@@ -274,9 +275,9 @@
     
     </div>
 
-    <img id="myImage" src="../assets/garbagebin-01.png" width="70%" onclick="startShaking()" />
+    <img id="myImage" src="assets/garbagebin-01.png" width="70%" onclick="startShaking()" />
     <div id="popupContainer" class="popup-container"></div>
     <div id="myImage3-container"></div>
-    <img id="myImage2" src="../assets/circle.png" width="60%" />
+    <img id="myImage2" src="assets/circle.png" width="60%" />
   </body>
 </html>
