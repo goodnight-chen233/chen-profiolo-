@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>视频播放</title>
+</head>
+<style>
+    .top1 {
+        position: absolute;
+        top: 5px;
+        font-size: 20px;
+    }
+    @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
+    }
+  }
+    @font-face {
+        font-family: 'dindin';
+        src: url('../../assets/DinkieBitmap-9pxDemo.ttf') format('truetype');
+        font-style: normal;
+    }
+
+    pre {
+        font-size: 15px;
+        font-family: "dindin";
+    }
+
+    /* Internet Explorer 10+ */
+    body {
+        -ms-overflow-style: none;
+    }
+p{
+bottom: 5px;
+}
+    h1,
+    p {
+        background-color: white; /* 背景颜色 */
+        display: inline-block; /* 内容水平排列 */
+        margin-right: 10px; /* 右边距 */
+        font-family: 'dindin', Arial, sans-serif;
+    }
+
+    #myImage2 {
+        position: fixed;
+        top: 600px;
+        left: 1200px;
+        width: 200px;
+        animation: rotate 10s infinite linear;
+    }
+
+    #myImage3 {
+        position: fixed;
+        top: 600px;
+        left: 1350px;
+        width: 130px;
+        animation: rotate 10s infinite linear;
+    }
+
+    .bottom-section h1,
+    .bottom-section p {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .grid-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        scrollbar-width: none; /* 隐藏滚动条 Firefox */
+        -ms-overflow-style: none; /* 隐藏滚动条 IE 和 Edge */
+    }
+
+    .grid-container::-webkit-scrollbar {
+        display: none; /* 隐藏滚动条 Chrome 和 Safari */
+    }
+
+    .grid-item {
+        flex: 0 0 auto;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+    .grid-item:hover img {
+        transform: scale(1.2);
+    }
+</style>
+
+<body>
+    
+    <div>
+        <video id="myVideo" controls>
+            <source src="../../assets/video.mp4" type="video/mp4" width: 1000px; 
+            height: 562.5px;  >
+        
+        </video>
+    </div>
+
+    <script>
+        var video = document.getElementById('myVideo');
+
+        video.addEventListener('click', function() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    </script>
+</body>
+<a href="../edge/index.html"><h1>Go back</h1></a>
+</html>
