@@ -13,6 +13,14 @@
           transform: translate(-50%, -50%) rotate(360deg) scale(1.2);
         }
       }
+      @keyframes rotate2{
+        from {
+          transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(-360deg) scale(1.2);
+        }
+      }
         @font-face {
             font-family: 'dindin';
             src: url('../../assets/DinkieBitmap-9pxDemo.ttf') format('truetype');
@@ -55,6 +63,13 @@ p{
             animation: rotate 10s infinite linear;
         }
 
+        #myImage4 {
+            position: fixed;
+            top: 500px;
+            left: 1275px;
+            width: 200px;
+            animation: rotate2 10s infinite linear;
+        }
         .bottom-section h1,
         .bottom-section p {
             margin-top: 10px;
@@ -200,6 +215,9 @@ p{
 </a>
 <a href="../../CHEN/dream/index.html">
     <img id="myImage3" src="../../assets/next.png" width="10px">
+</a>
+<a href="../../CHEN/v2/index.html">
+    <img id="myImage4" src="../../assets/watch.png" width="10px">
 </a>
 <div class="scroll-container"></div>
 <div class="bottom-section">
